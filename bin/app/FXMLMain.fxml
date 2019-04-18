@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0"
+	prefWidth="1024.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="app.controll.FXMLMainController">
+	<children>
+		<VBox prefHeight="600.0" prefWidth="200.0" styleClass="sidebar"
+			stylesheets="@stylesheet.css">
+			<children>
+				<Label fx:id="labelAdminPanel" prefHeight="75.0"
+					prefWidth="300.0" style="-fx-background-color: #00A2D3;"
+					text="Dashboard" textFill="WHITE">
+					<font>
+						<Font name="Ebrima" size="18.0" />
+					</font>
+					<opaqueInsets>
+						<Insets left="10.0" />
+					</opaqueInsets>
+					<padding>
+						<Insets left="10.0" />
+					</padding>
+				</Label>
+				<HBox prefHeight="38.0" prefWidth="300.0">
+					<children>
+						<TextField fx:id="txtField_Buscar" minHeight="-Infinity"
+							minWidth="-Infinity" prefHeight="35.0" prefWidth="300.0"
+							promptText="Buscar" style="-fx-background-color: #EFF;">
+							<font>
+								<Font name="Calibri Light" size="15.0" />
+							</font>
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+							<rotationAxis>
+								<Point3D />
+							</rotationAxis>
+							<cursor>
+								<Cursor fx:constant="TEXT" />
+							</cursor>
+						</TextField>
+					</children>
+				</HBox>
+				<HBox fx:id="btn_Cadastrar" prefHeight="35.0" prefWidth="200.0">
+					<children>
+						<Button fx:id="btn_Inserir" mnemonicParsing="false"
+							onMouseClicked="#initialize" styleClass="btns" text="Inserir"
+							textFill="WHITE" HBox.hgrow="ALWAYS">
+							<font>
+								<Font name="Calibri Light" size="15.0" />
+							</font>
+						</Button>
+					</children>
+				</HBox>
+				<HBox fx:id="btn_Inserir1" prefHeight="35.0" prefWidth="200.0">
+					<children>
+						<Button fx:id="btn_Alterar" mnemonicParsing="false"
+							styleClass="btns" text="Alterar" textFill="WHITE"
+							HBox.hgrow="ALWAYS">
+							<font>
+								<Font name="Calibri Light" size="15.0" />
+							</font>
+						</Button>
+					</children>
+				</HBox>
+				<HBox fx:id="btn_Inserir2" prefHeight="35.0" prefWidth="200.0">
+					<children>
+						<Button fx:id="btn_Remover" mnemonicParsing="false"
+							styleClass="btns" text="Remover" textFill="WHITE"
+							HBox.hgrow="ALWAYS">
+							<font>
+								<Font name="Calibri Light" size="15.0" />
+							</font>
+						</Button>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<VBox layoutX="300.0" prefHeight="600.0" prefWidth="724.0"
+			styleClass="parent" stylesheets="@stylesheet.css">
+			<children>
+				<HBox prefHeight="602.0" prefWidth="724.0">
+					<children>
+						<VBox prefHeight="501.0" prefWidth="728.0">
+							<children>
+								<HBox prefHeight="77.0" prefWidth="724.0">
+									<children>
+										<Label fx:id="labelMarca" prefHeight="75.0"
+											prefWidth="200.0" style="-fx-background-color: #00A2D3;"
+											text="Marcas" textAlignment="CENTER" textFill="WHITE">
+											<font>
+												<Font name="Ebrima" size="18.0" />
+											</font>
+											<opaqueInsets>
+												<Insets left="10.0" />
+											</opaqueInsets>
+											<padding>
+												<Insets left="10.0" />
+											</padding>
+										</Label>
+										<Label fx:id="labelModelo" contentDisplay="CENTER"
+											prefHeight="75.0" prefWidth="200.0"
+											style="-fx-background-color: #00A2D3;" text="Modelos"
+											textAlignment="CENTER" textFill="WHITE">
+											<font>
+												<Font name="Ebrima" size="18.0" />
+											</font>
+											<opaqueInsets>
+												<Insets left="10.0" />
+											</opaqueInsets>
+											<padding>
+												<Insets left="10.0" />
+											</padding>
+										</Label>
+										<Label fx:id="labelAno" prefHeight="75.0"
+											prefWidth="100.0" style="-fx-background-color: #00A2D3;"
+											text="Ano" textFill="WHITE">
+											<font>
+												<Font name="Ebrima" size="18.0" />
+											</font>
+											<opaqueInsets>
+												<Insets left="10.0" />
+											</opaqueInsets>
+											<padding>
+												<Insets left="10.0" />
+											</padding>
+										</Label>
+										<Label fx:id="labelVeiculo" prefHeight="75.0"
+											prefWidth="324.0" style="-fx-background-color: #00A2D3;"
+											text="Veículo" textAlignment="CENTER" textFill="WHITE"
+											textOverrun="CENTER_ELLIPSIS">
+											<font>
+												<Font name="Ebrima" size="18.0" />
+											</font>
+											<opaqueInsets>
+												<Insets left="10.0" />
+											</opaqueInsets>
+											<padding>
+												<Insets left="10.0" />
+											</padding>
+										</Label>
+									</children>
+								</HBox>
+								<TableView fx:id="table_Marcas" prefHeight="497.0"
+									prefWidth="724.0" style="-fx-background-color: #EFF;">
+									<columns>
+										<TableColumn fx:id="nameCol" text="name"></TableColumn>
+										<TableColumn fx:id="fipe_nameCol" text="fipe_name"></TableColumn>
+										<TableColumn fx:id="orderCol" text="order"></TableColumn>
+										<TableColumn fx:id="keyCol" text="key"></TableColumn>
+										<TableColumn fx:id="idCol" text="id"></TableColumn>
+									</columns>
+								</TableView>
+							</children>
+						</VBox>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</children>
+</AnchorPane>
